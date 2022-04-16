@@ -6,6 +6,7 @@ import Cursor from "./Components/Cursor";
 import About from "./Pages/About";
 import "./App.css";
 import Loading from "./Components/Loading";
+import P404 from "./Pages/P404";
 // const Layout = lazy(() => import('./Components/Layout'))
 
 function App() {
@@ -13,12 +14,11 @@ function App() {
     <div className="App">
       <Cursor />
       <Routes>
-          <Route path="/" element={<Layout />} />
+        <Route path="/" element={<Layout />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<P404 />} />
       </Routes>
-      <header className="App-header">
-    
-      </header>
+      <header className="App-header"></header>
     </div>
   );
 }
