@@ -1,13 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import React, { lazy, Suspense, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import Layout from "./Components/Layout";
 import Cursor from "./Components/Cursor";
 import About from "./Pages/About";
 import "./App.css";
-import Loading from "./Components/Loading";
 import P404 from "./Pages/P404";
-// const Layout = lazy(() => import('./Components/Layout'))
 
 function App() {
   const countRef = useRef();
@@ -20,7 +18,9 @@ function App() {
           setView(res.value);  
         });
     };
-    updateCount();console.log(view);
+    updateCount();
+    console.log(view);
+    console.log(view);
     }, []);
 
   return (
