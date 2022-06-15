@@ -22,7 +22,7 @@ function App() {
     };
     updateCount();console.log(view);
     }, []);
-
+// Test1
   return (
     <div className="App">
       <div style={{opacity:0}} ref={countRef}>{view}</div>
